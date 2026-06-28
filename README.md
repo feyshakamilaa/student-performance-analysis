@@ -1,35 +1,34 @@
-# Student Performance Analysis
+# Concrete Compressive Strength Analysis
 
-Analisis data performa mahasiswa menggunakan Python dengan pendekatan Exploratory Data Analysis (EDA) dan Regresi Linear Berganda. Proyek ini bertujuan untuk mengidentifikasi faktor-faktor yang memengaruhi nilai akhir siswa berdasarkan beberapa variabel seperti lama belajar, nilai sebelumnya, jam tidur, dan faktor lainnya.
+Analisis faktor-faktor yang memengaruhi **kuat tekan beton (Concrete Compressive Strength)** menggunakan metode **Regresi Linier Berganda** dengan Python.
 
-## Deskripsi Proyek
-
-Notebook ini berisi tahapan analisis data mulai dari proses persiapan data, eksplorasi data, visualisasi, pembangunan model regresi linear berganda, hingga evaluasi model.
-
-Analisis dilakukan menggunakan dataset **Student Performance** untuk memahami hubungan antara variabel independen dengan **Performance Index** sebagai variabel dependen.
+Proyek ini merupakan tugas mata kuliah Analisis Data yang bertujuan untuk membangun model prediksi kuat tekan beton berdasarkan karakteristik material penyusunnya serta mengevaluasi performa model yang dihasilkan.
 
 ---
 
-## Tujuan
+## Deskripsi Proyek
 
-- Melakukan Exploratory Data Analysis (EDA).
-- Mengetahui hubungan antar variabel.
-- Membangun model Regresi Linear Berganda.
-- Mengevaluasi performa model menggunakan beberapa metrik evaluasi.
-- Menginterpretasikan hasil analisis sebagai dasar pengambilan keputusan.
+Notebook ini berisi proses analisis data secara lengkap mulai dari eksplorasi data, preprocessing, pembangunan model regresi, hingga evaluasi hasil prediksi.
+
+Analisis dilakukan menggunakan dataset **Concrete Compressive Strength** untuk mengetahui pengaruh setiap variabel independen terhadap nilai kuat tekan beton.
 
 ---
 
 ## Dataset
 
-Dataset yang digunakan adalah **Student Performance Dataset** dengan beberapa atribut, di antaranya:
+Dataset yang digunakan adalah **Concrete Compressive Strength Dataset**.
 
-- Hours Studied
-- Previous Scores
-- Sleep Hours
-- Sample Question Papers Practiced
-- Extracurricular Activities
-- Performance Index
+Variabel yang digunakan meliputi:
+
+- Cement
+- Blast Furnace Slag
+- Fly Ash
+- Water
+- Superplasticizer
+- Coarse Aggregate
+- Fine Aggregate
+- Age
+- Concrete Compressive Strength (Target)
 
 ---
 
@@ -48,29 +47,31 @@ Dataset yang digunakan adalah **Student Performance Dataset** dengan beberapa at
 
 ## Tahapan Analisis
 
-1. Import Library
-2. Load Dataset
-3. Data Cleaning
-4. Exploratory Data Analysis (EDA)
-5. Visualisasi Data
-6. Feature Selection
-7. Pembangunan Model Regresi Linear Berganda
-8. Evaluasi Model
-9. Interpretasi Hasil
-10. Kesimpulan
+- Import library
+- Load dataset
+- Exploratory Data Analysis (EDA)
+- Data Understanding
+- Data Preprocessing
+- Analisis Korelasi
+- Visualisasi Data
+- Pembangunan Model Regresi Linier Berganda
+- Evaluasi Model
+- Interpretasi Hasil
+- Kesimpulan
 
 ---
 
 ## Struktur Repository
 
 ```
-student-performance-analysis/
+concrete-compressive-strength-analysis/
 │
 ├── student_performance_analysis.ipynb
-├── Student_Performance.csv
+├── Concrete_Data.csv
 ├── README.md
-└── requirements.txt (opsional)
 ```
+
+> **Catatan:** Sebaiknya ubah nama notebook menjadi `concrete_strength_analysis.ipynb` agar sesuai dengan isi proyek.
 
 ---
 
@@ -79,16 +80,16 @@ student-performance-analysis/
 1. Clone repository
 
 ```bash
-git clone https://github.com/feyshakamilaa/student-performance-analysis.git
+git clone https://github.com/feyshakamilaa/concrete-compressive-strength-analysis.git
 ```
 
 2. Masuk ke folder project
 
 ```bash
-cd student-performance-analysis
+cd concrete-compressive-strength-analysis
 ```
 
-3. Install dependency
+3. Install library yang diperlukan
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
@@ -100,23 +101,29 @@ pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
 jupyter notebook
 ```
 
-5. Buka file
+5. Buka notebook
 
 ```
-student_performance_analysis.ipynb
+concrete_strength_analysis.ipynb
 ```
 
 ---
 
-## Hasil Analisis
+## Metode Analisis
 
-Analisis menghasilkan model Regresi Linear Berganda yang digunakan untuk memprediksi **Performance Index** berdasarkan beberapa variabel independen.
+Metode utama yang digunakan pada proyek ini adalah **Regresi Linier Berganda** untuk menganalisis hubungan antara beberapa variabel independen terhadap nilai kuat tekan beton.
 
-Selain itu dilakukan evaluasi model menggunakan metrik seperti:
+Model kemudian dievaluasi menggunakan beberapa metrik seperti:
 
-- R² Score
+- Coefficient of Determination (R²)
 - Mean Absolute Error (MAE)
 - Mean Squared Error (MSE)
 - Root Mean Squared Error (RMSE)
+
+---
+
+## Hasil
+
+Melalui analisis ini diperoleh model regresi yang dapat digunakan untuk memprediksi kuat tekan beton berdasarkan komposisi material penyusunnya. Selain itu, dilakukan interpretasi terhadap pengaruh masing-masing variabel terhadap target prediksi.
 
 ---
